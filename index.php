@@ -5,6 +5,7 @@ require_once __DIR__ . '/classes/Mammal.php';
 require_once __DIR__ . '/classes/Bird.php';
 require_once __DIR__ . '/classes/Falcon.php';
 require_once __DIR__ . '/classes/Bat.php';
+require_once __DIR__ . '/classes/FalcoUccellatore.php';
 // require_once __DIR__ . '/classes/Volatile.php';
 
 $animal = new Animal('Crocodile');
@@ -20,11 +21,14 @@ var_dump($ornitorinco);
 
 $uccellino = new Bird("Pettirosso", "500");
 $pipistrello = new Bat("Pipistrello Blu", 2, 12, "1 metro", 40);
-$falco = new Falcon("Falco uccellatore", 2000, 385, "2.5 metri", 10);
+$falco = new Falcon("falco pellegrino", 2000, 200, "2.5 metri", 10);
 $koala = new Mammal("Koala", 4);
+$falcoUccellatore = new FalcoUccellatore(2400, 385, "2 metri", 12);
 
-var_dump($koala, $uccellino, $pipistrello, $falco);
+var_dump($koala, $uccellino, $pipistrello, $falco, $falcoUccellatore);
 
 echo $falco->getWingSpan();
 echo "<br>";
 echo $pipistrello->getWingSpan();
+echo "<br>";
+echo $falcoUccellatore->getWingSpan();
